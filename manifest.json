@@ -1,0 +1,18 @@
+{
+    "name": "Парсер HTML",
+    "description": "Расширение для HTML",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [ "https://frontendconf.ru/*", "https://appsconf.ru/*"],
+            "js": ["script.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": ["https://frontendconf.ru/*", "https://appsconf.ru/*"],
+    "browser_action": {
+          "default_title": "Advert'nt",
+          "default_popup": "popup/popup.html"
+    }
+}
